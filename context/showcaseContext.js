@@ -10,7 +10,16 @@ const ShowcaseProvider = ({ children }) => {
   useEffect(() => {
     const getPosts = async () => {
       const querySnapshot = await getDocs(collection(db, "projects"));
-      querySnapshot.docs.map((doc) => console.log(doc));
+      setProjects(
+        querySnapshot.docs.map((doc) => {
+          return {
+            id: doc.id,
+            data: {
+              ...doc.data(),
+            },
+          };
+        })
+      );
     };
 
     getPosts();
