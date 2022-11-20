@@ -6,7 +6,7 @@ import { useContext } from "react";
 import { ShowcaseContext } from "../context/showcaseContext";
 
 import Header from "./Header";
-import SectionFour from "./SectionFour";
+import ProjectCard from "./projectCard";
 import { Container, Text, Title, Grid } from "@mantine/core";
 
 export default function Home() {
@@ -27,7 +27,9 @@ export default function Home() {
             <Grid>
               {projects &&
                 projects.map((project: any) => (
-                  <SectionFour key={project.id} project={project.data} />
+                  <Grid.Col xs={12} sm={6} md={4} lg={3}>
+                    <ProjectCard key={project.id} project={project.data} />
+                  </Grid.Col>
                 ))}
             </Grid>
           </Container>
