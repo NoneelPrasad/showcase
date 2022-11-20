@@ -1,0 +1,16 @@
+@import "./Styles/Header.scss";
+
+section {
+  padding: 4rem 0rem;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @media only screen and (max-width: 768px) {
+    padding-left: 1rem;
+    padding-right: 1rem;
+
+    .mantine-Container-root {
+      padding: 0px;
+    }
+  }
+}
