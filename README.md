@@ -36,4 +36,4 @@ MEASUREMENT_ID=
 
 ### Deployment using Vercel
 
-Domain:
+Domain: https://showcase-apps.vercel.app/
