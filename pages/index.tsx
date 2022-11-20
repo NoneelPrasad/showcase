@@ -1,5 +1,4 @@
 import Head from "next/head";
-import Image from "next/image";
 import styles from "../styles/Home.module.css";
 
 import { useContext } from "react";
@@ -7,7 +6,7 @@ import { ShowcaseContext } from "../context/showcaseContext";
 
 import Header from "./Header";
 import ProjectCard from "./projectCard";
-import { Container, Text, Title, Grid } from "@mantine/core";
+import { Container, Grid } from "@mantine/core";
 
 export default function Home() {
   const { projects } = useContext(ShowcaseContext);
@@ -26,9 +25,9 @@ export default function Home() {
           <Container size="xl">
             <Grid>
               {projects &&
-                projects.map((project: any) => (
-                  <Grid.Col xs={12} sm={6} md={4} lg={3}>
-                    <ProjectCard key={project.id} project={project?.data} />
+                projects.map((project: any, index: number) => (
+                  <Grid.Col key={index} xs={12} sm={6} md={4} lg={3}>
+                    <ProjectCard project={project?.data} />
                   </Grid.Col>
                 ))}
             </Grid>
