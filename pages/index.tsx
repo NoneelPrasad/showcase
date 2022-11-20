@@ -28,7 +28,7 @@ export default function Home() {
               {projects &&
                 projects.map((project: any) => (
                   <Grid.Col xs={12} sm={6} md={4} lg={3}>
-                    <ProjectCard key={project?.id} project={project?.data} />
+                    <ProjectCard key={project.id} project={project?.data} />
                   </Grid.Col>
                 ))}
             </Grid>
