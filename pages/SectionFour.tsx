@@ -1,8 +1,6 @@
 import {
   useMantineTheme,
-  Container,
   Text,
-  Flex,
   Grid,
   Card,
   Image,
@@ -19,7 +17,7 @@ const SectionFour = ({ project }: any) => {
       <Card shadow="sm" p="lg" style={{ height: "100%" }}>
         <Card.Section>
           <Image
-            src={project.image}
+            src={project?.image}
             alt={"sample1"}
             height="125px"
             fit="contain"
@@ -30,16 +28,16 @@ const SectionFour = ({ project }: any) => {
           position="apart"
           style={{ marginBottom: 5, marginTop: theme.spacing.sm }}
         >
-          <Text weight={500}>{project.name}</Text>
+          <Text weight={500}>{project?.name}</Text>
           <Badge color="yellow" variant="light">
-            {project.languages}
+            {project?.languages}
           </Badge>
         </Group>
 
-        <Text size="sm">{project.description}</Text>
+        <Text size="sm">{project?.description}</Text>
         <Button
           variant="light"
-          onClick={() => redirectToLink(project.webdomain)}
+          onClick={() => redirectToLink(project?.webdomain)}
           color="yellow"
           fullWidth
           mt="14px"
